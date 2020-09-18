@@ -11,11 +11,14 @@ router.get('/media', (req, res) => {
 // POST one Media
 router.post('/media', (req, res) => {
   Media.create({
-    text: req.body.text,
-    user: req.user._id
+    title: req.body.title,
+    year: req.body.year,
+    imdbID: req.body.imdbID,
+    type: req.body.type,
+    poster: req.body.poster
   })
     .then(media => {
-       res.json(media))
+       res.json(media)
     })
     .catch(err => console.log(err))
 })
