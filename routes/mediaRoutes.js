@@ -8,33 +8,30 @@ router.get('/media', (req, res) => {
     .catch(err => console.log(err))
 })
 
-// POST one Media
+// POST Media
 router.post('/media', (req, res) => {
-  Media.create({
-    title: req.body.title,
-    year: req.body.year,
-    imdbID: req.body.imdbID,
-    type: req.body.type,
-    poster: req.body.poster
-  })
+  Media.create(req.body)
     .then(media => {
        res.json(media)
     })
     .catch(err => console.log(err))
 })
 
-// PUT one Media
+// PUT Media
 router.put('/media/:id', (req, res) => {
   Media.findByIdAndUpdate(req.params.id, req.body)
     .then(() => res.sendStatus(200))
     .catch(err => console.log(err))
 })
 
-// DELETE one Media
+// DELETE Media
 router.delete('/media/:id', (req, res) => {
-  Media.findByIdAndDelete(req.params.id)
-    .then(() => res.sendStatus(200))
+  Media.findById(req.params.id)
+    .then(media => media.remove())
+    .then(media => res.json)
     .catch(err => console.log(err))
 })
+
+//http://www.omdbapi.com/?apikey=trilogy&t=${search}
 
 module.exports = router
