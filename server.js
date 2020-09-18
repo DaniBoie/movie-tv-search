@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use(require('./routes'))
-
+// change
 if (process.env.NODE_ENV === 'production') {
   app.get('/*', (req, res) => {
     res.sendFile(join(__dirname, 'client', 'public', 'index.html'))
