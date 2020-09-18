@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 // IMPORT for links on page
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 // IMPORT for other pages on site
+import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Saved from './pages/Saved'
 
@@ -11,9 +12,8 @@ function App() {
   <>
   <Router>
     <div>
+      <Navbar />
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/saved">Saved</Link>
         <Switch>
           <Route exact path='/' component={Home}></Route>
           <Route path='/' component={Saved}></Route>

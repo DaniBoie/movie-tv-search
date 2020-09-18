@@ -1,4 +1,7 @@
+import Typography from '@material-ui/core/Typography';
+import MediaContext from '../../utils/MediaContext'
 import React, {useState} from 'react'
+import Form from '../../components/Form'
 import API from '../../utils/API'
 
 const Home = () => {
@@ -37,21 +40,12 @@ const Home = () => {
 
   return (
     <>
-    <h1>Search for Movies and TV shows</h1>
-    <form>
-      <p>
-        <label htmlFor="search">Search</label>
-        <input 
-        type="text" 
-        name="search"
-        value={mediaState.search}
-        onChange={mediaState.handleInputChange}
-        />
-      </p>
-      <p>
-        <button onClick={mediaState.handleSearchOMDB}>Search OMDB</button>
-      </p>
-    </form>
+    <hr />
+      <Typography variant="h6">
+        Movie/TV Search
+          </Typography>
+        <MediaContext.Provider value={mediaState}>
+      <Form />
     {
       mediaState.media.length > 0 ? (
         mediaState.media.map(media => (
@@ -66,6 +60,7 @@ const Home = () => {
         ))
       ) : null
     }
+      </MediaContext.Provider>
     </>
   )
 }
