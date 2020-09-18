@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+// CREATING API call skeletons to be called globally in the app.
 const API = {
   getMedia: search => axios.get(`/api/omdb/${search}`),
   getSavedMedia: () => axios.get('/api/media'),

@@ -3,17 +3,21 @@ import API from '../../utils/API'
 
 const Home = () => {
 
+  // SETTING up media state and the data.
   const [mediaState, setMediaState] = useState({
     search: '',
     media: []
   })
 
+  // HANDLING the inputs on the page.
   mediaState.handleInputChange = event => {
     setMediaState({...mediaState, [event.target.name]: event.target.value})
   }
 
+  // HANDLING the search for media
   mediaState.handleSearchOMDB = event => {
     event.preventDefault()
+    // CALLS api to get data from OMDB API
     API.getMedia(mediaState.search)
     .then(({data}) => {
       setMediaState({...mediaState, media: data, search: ''})
@@ -21,7 +25,7 @@ const Home = () => {
     .catch(err => console.log(err))
   }
 
-
+  //STUDY!
   mediaState.handleSaveMedia = imdbID => {
     const saveMedia = mediaState.media.filter(x => x.imdbID === imdbID)[0]
     API.saveMedia(saveMedia)

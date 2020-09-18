@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
+// IMPORT for links on page
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
+// IMPORT for other pages on site
 import Home from './pages/Home'
 import Saved from './pages/Saved'
 
