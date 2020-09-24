@@ -1,5 +1,5 @@
 {
-  "name": "movie-tv-search",
+  "name": "googleBookSearch",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DaniBoie/movie-tv-search.git"
+    "url": "git+https://github.com/DaniBoie/googleBookSearch.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DaniBoie/movie-tv-search/issues"
+    "url": "https://github.com/DaniBoie/googleBookSearch/issues"
   },
-  "homepage": "https://github.com/DaniBoie/movie-tv-search#readme",
+  "homepage": "https://github.com/DaniBoie/googleBookSearch#readme",
   "dependencies": {
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
