@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DaniBoie/googleBookSearch.git"
+    "url": "git+https://github.com/DaniBoie/.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DaniBoie/googleBookSearch/issues"
+    "url": "https://github.com/DaniBoie//issues"
   },
-  "homepage": "https://github.com/DaniBoie/googleBookSearch#readme",
+  "homepage": "https://github.com/DaniBoie/#readme",
   "dependencies": {
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
